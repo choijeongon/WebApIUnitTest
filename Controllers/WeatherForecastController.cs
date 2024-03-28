@@ -6,17 +6,16 @@ namespace WebApIUnitTest.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        [HttpGet(Name ="Test")]
+        public ActionResult Test()
+        {
+            return Ok();
+        }
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
-
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
-        }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
