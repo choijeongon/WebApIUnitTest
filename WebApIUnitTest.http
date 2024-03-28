@@ -1,0 +1,6 @@
+@WebApIUnitTest_HostAddress = http://localhost:5267
+
+GET {{WebApIUnitTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
